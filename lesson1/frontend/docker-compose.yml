@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  nginx:
+    build:
+      context: ./frontend
+    ports:
+      - 8080:80 # allow access to these ports 
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - 3000:3000 # allow access to there ports
